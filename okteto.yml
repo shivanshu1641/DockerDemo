@@ -8,7 +8,7 @@ build:
   #  - OKTETO_BUILD_dockerdemo_REGISTRY: image registry
   #  - OKTETO_BUILD_dockerdemo_REPOSITORY: image repo
    - OKTETO_BUILD_dockerdemo_IMAGE: dockerdemo
-   - OKTETO_BUILD_dockerdemo_TAG: latest
+   - OKTETO_BUILD_dockerdemo_TAG: v1
   dockerdemo:
     context: .
     dockerfile: Dockerfile
