@@ -7,8 +7,8 @@ build:
   # You can use the following env vars to refer to this image in your deploy commands:
   #  - OKTETO_BUILD_dockerdemo_REGISTRY: image registry
   #  - OKTETO_BUILD_dockerdemo_REPOSITORY: image repo
-  #  - OKTETO_BUILD_dockerdemo_IMAGE: image name
-  #  - OKTETO_BUILD_dockerdemo_TAG: image tag
+   - OKTETO_BUILD_dockerdemo_IMAGE: dockerdemo
+   - OKTETO_BUILD_dockerdemo_TAG: latest
   dockerdemo:
     context: .
     dockerfile: Dockerfile
