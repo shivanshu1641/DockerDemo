@@ -1,0 +1,33 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: dockerdemo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: dockerdemo
+  template:
+    metadata:
+      labels:
+        app: dockerdemo
+    spec:
+      containers:
+      - image: okteto/dockerdemo:python
+        name: dockerdemo
+
+---
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: dockerdemo
+  annotations:
+    dev.okteto.com/auto-ingress: "true"
+spec:
+  type: ClusterIP  
+  ports:
+  - name: "dockerdemo"
+    port: 8080
+  selector:
+    app: dockerdemo
