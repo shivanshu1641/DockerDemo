@@ -13,7 +13,7 @@ spec:
         app: dockerdemo
     spec:
       containers:
-      - image: okteto/dockerdemo:latest
+      - image: okteto.dev/dockerdemo:latest
         name: dockerdemo
 
 
