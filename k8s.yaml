@@ -13,7 +13,7 @@ spec:
         app: dockerdemo
     spec:
       containers:
-      - image: okteto/dockerdemo:python
+      - image: okteto/dockerdemo:latest
         name: dockerdemo
 
 ---
@@ -28,6 +28,6 @@ spec:
   type: ClusterIP  
   ports:
   - name: "dockerdemo"
-    port: 8080
+    port: 5000
   selector:
     app: dockerdemo
